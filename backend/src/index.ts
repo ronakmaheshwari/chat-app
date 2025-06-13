@@ -25,7 +25,7 @@ wss.on("connection",function connection(socket){
     })
     console.log("Connected clients:", wss.clients.size);
     console.log("Listener Count:", wss.listenerCount("connection"));
-    socket.send(JSON.stringify({data:'Hello! Message From Server!!'}));
+    socket.send(JSON.stringify({message:'Hello! Message From Server!!'}));
 })
 
 wss.once('connection',(data)=>{
